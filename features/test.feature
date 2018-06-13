@@ -1,8 +1,10 @@
 Feature: Employers
+  Background:
+    Given there is an Employer
+    And there is an Employer "Cucumber Ltd"
+
   Scenario: No name
-    Given the Employer
-    Then the name should not be set
+    Then the Employer exists
 
   Scenario: Explicit name
-    Given the Employer "Cucumber Ltd"
-    Then the name should be "Cucumber Ltd"
+    Then the Employer "Cucumber Ltd" exists
